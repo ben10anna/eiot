@@ -1,0 +1,93 @@
+EXPERIMENT NO: 3
+ARITHMETIC OPERATIONS IN 8051 USING SIMULATOR
+1. AIM
+To write and execute an 8051 assembly language program to perform arithmetic and logical operations using the MCU 8051 simulator.
+2. APPARATUS REQUIRED
+1. Personal Computer (PC)
+2. MCU 8051 IDE Simulator
+3.PROCEDURE
+1. Open the MCU 8051 IDE simulator.
+2. Create a new assembly language file.
+3. Type the given assembly language program.
+4. Save the file with .asm extension.
+5. Click Assemble or Build Target.
+6. Check whether any errors are present.
+7. Enter debugging mode.
+8. Click Run or Step Run to execute the program.
+9. Check the output in the Internal RAM memory window
+4. PROGRAM
+       ORG 0000H
+CLR C
+
+; ADDITION
+MOV A, #20H
+ADD A, #21H
+MOV 41H, A
+
+; SUBTRACTION
+MOV A, #20H
+SUBB A, #18H
+MOV 42H, A
+
+; MULTIPLICATION
+MOV A, #03H
+MOV B, #04H
+MUL AB
+MOV 43H, A
+
+; DIVISION
+MOV A, #95H
+MOV B, #10H
+DIV AB
+MOV 44H, A
+MOV 45H, B
+
+; AND
+MOV A, #25H
+MOV B, #12H
+ANL A, B
+MOV 46H, A
+
+; OR
+MOV A, #25H
+MOV B, #15H
+ORL A, B
+MOV 47H, A
+
+; XOR
+MOV A, #45H
+MOV B, #67H
+XRL A, B
+MOV 48H, A
+
+; NOT
+MOV A, #45H
+CPL A
+MOV 49H, A
+
+END
+
+5. OUTPUT
+Operation	Address	Output
+Addition	41H	41H
+Subtraction	42H	08H
+Multiplication	43H	0CH
+Division	44H	09H
+Remainder	45H	05H
+AND	46H	00H
+OR	47H	35H
+XOR	48H	22H
+NOT	49H	BAH
+
+6. RESULT
+Thus, the 8051 assembly language program to perform arithmetic and logical operations using the simulator was executed successfully.
+7. HOW TO RUN THE PROGRAM
+1. Open MCU 8051 IDE.
+2. Click File → New.
+3. Copy and paste the above program.
+4. Save as arithmetic.asm.
+5. Click Assemble.
+6. Enter Debug mode.
+7. Click Run.
+8. Open Internal RAM / Memory window.
+9. Check memory locations 41H to 49H for the output.
